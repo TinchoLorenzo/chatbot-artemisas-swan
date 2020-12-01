@@ -1,0 +1,119 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- horario_descripcion
+- organizar_reunion
+- negacion
+- proximas_reuniones
+- nuevo_sprint
+- afirmacion
+- fecha
+- stop
+- conocer_tareas_to_do
+- greet
+- bot_challenge
+- saludo
+- despedida
+- agradecer
+- respuesta
+- conocer_online
+- conocer_tareas_in_progress
+- conocer_tareas_done
+- conocer_organizacion
+- ayuda
+- python
+- comentarios_python
+- operadores_python
+- listas_python
+- artefactos
+- mi_tarea
+- asignar_tarea
+- sprint_actual
+- horario
+- empezar_reunion
+- ingresar_reunion
+- pasar_datos
+entities:
+- descripcion
+- fecha_fin
+- horario
+- id_reunion
+- id_tarea
+slots:
+  descripcion:
+    type: text
+    influence_conversation: true
+  fecha_fin:
+    type: text
+    influence_conversation: true
+  horario:
+    type: text
+    influence_conversation: true
+  id_reunion:
+    type: text
+    influence_conversation: true
+  id_tarea:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you uppppppp:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_de_nada:
+  - text: Por nada, estoy para ayudar :)
+  utter_ayuda:
+  - text: Estas son las cosas en las que te puedo ayudar. \nUsuarios conectados. \nOrganizacion de los grupos de trabajo. \n Artefactos disponibles para utilizar en la implementacion de cualquier fase de alguna metodologia de desarrollo de software. \n Tareas en estado to do. \n Tareas en estado inprogress. \n Tareas en estado done. \n Python
+  utter_python:
+  - text: Puedes consultarme acerca de comentarios, operadores o listas. Para mas ayuda en python puedes consultar el siguiente tutorial https://www.w3schools.com/python/
+  utter_comentarios_python:
+  - text: 'En Python puedes comentar una línea de código con # o comentar con triple comilla simple al inicio y al final del comentario.'
+  utter_operadores_python:
+  - text: Los operadores aritmeticos en python son. Operador Nombre            Ejemplo +      suma              x + y -      resta             x - y *      multiplicacion    x * y /      division          x / y %      modulo            x % y **     potencia          x ** y //     division entera   x // y Para conocer sobre los demas operadores en python, puedes consultar la siguiente documentacion https://www.w3schools.com/python/python_operators.asp
+  utter_listas_python:
+  - text: Una lista es una coleccion ordenable y cambiable, estas se definen entre corchetes. Por ejemplo fruitList = ["apple", "banana", "cherry"] Para mas informacion acerca de las listas en python puedes consultar la siguiente documentacion https://www.w3schools.com/python/python_lists.asp
+  utter_artefactos:
+  - text: artefacto a toda funcionalidad provista por nuestro framework que de soporte a la implementación de cualquier fase de alguna metodología de desarrollo de Software.
+  utter_elegir_tarea:
+  - text: Ingresa el id de la tarea que quieres elegir
+  utter_no_elegir_tarea:
+  - text: Perfecto, cuando quieras ayuda solo etiquetame
+  utter_ingresar_fecha:
+  - text: Perfecto, ingresa la fecha de fin en formato DD/MM/YYYY
+  utter_ingresar_hora:
+  - text: Perfecto, ingresa la hora en formato HH:MM
+  utter_ingresar_hora_descripcion:
+  - text: Perfecto, ingresa la hora en formato HH:MM seguido de la descripcion de la reunion
+  utter_ingresar_id_reunion:
+  - text: Ingresa el numero de la reunion que quieres comenzar
+actions:
+- action_asignar_tarea
+- action_empezar_reunion
+- action_hello_world
+- action_mi_tarea
+- action_nueva_reunion
+- action_nuevo_sprint
+- action_online_members
+- action_organizacion_actual
+- action_pregunta
+- action_programar_dailys
+- action_programar_reuniones
+- action_proximas_reuniones
+- action_sprint_actual
+- action_tareas_done
+- action_tareas_in_progress
+- action_tareas_to_do
+- utter_ingresar_hora_descripcion
+- utter_no_elegir_tarea
+- action_pasar_datos
+version: '2.0'

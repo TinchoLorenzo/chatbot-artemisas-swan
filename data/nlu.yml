@@ -1,0 +1,203 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: ayuda
+  examples: |
+    - ayuda
+    - necesito ayuda
+    - en que me puedes ayudar
+    - tengo una consultar
+    - quiero consultarte algo
+- intent: python
+  examples: |
+    - python
+    - puedes ayudarme con python
+    - que necesito saber de python
+- intent: comentarios_python
+  examples: |
+    - como se realiza un comentario en python
+    - que opciones hay para comentar una linea en python
+    - como se comenta en python
+    - comentarios python
+    - como se hace un comentario multilinea en python
+- intent: operadores_python
+  examples: |
+    - como se utilizan los operadores en python
+    - como se calcula una potencia en python
+    - operadores python
+    - como se calcula un modulo en python
+- intent: listas_python
+  examples: |
+    - como se declara una lista en python
+    - listas python
+- intent: artefactos
+  examples: |
+    - cuales son los artefactos que puedo utilizar
+    - artefactos
+    - que son los artefactos
+    - que artefactos hay
+- intent: asignar_tarea
+  examples: |
+    - la tarea [1](id_tarea)
+    - la tarea [2](id_tarea)
+    - la tarea [3](id_tarea)
+    - la tarea [4](id_tarea)
+- intent: mi_tarea
+  examples: |
+    - como es mi dia hoy?
+    - como es mi dia?
+    - que tengo que hacer hoy?
+    - tengo alguna tarea asignada?
+- intent: organizar_reunion
+  examples: |
+    - nueva reunion
+    - organizar reunion
+- intent: horario_descripcion
+  examples: |
+    - [15:30](horario) es una reunion de [restrospective](descripcion)
+    - [12:00](horario) es una reunion [diaria](descripcion)
+    - [14:25](horario) es una reunion para [decidir el lenguaje](descripcion)
+    - [16:00](horario) es una reunion para [poker planning](descripcion)
+    - [14:30](horario) es una reunion de [poker planning](descripcion)
+    - [13:23](horario) la reunion es de [poker planning](descripcion)
+    - [15:13](horario) la reunion es de [restropective](descripcion)
+- intent: horario
+  examples: |
+    - [15:30](horario)
+    - [12:00](horario)
+    - [14:25](horario)
+    - [16:00](horario)
+- intent: empezar_reunion
+  examples: |
+    - quiero dar comienzo a una reunion
+    - empezar reunion
+    - da comienzo a una reunion
+- intent: pasar_datos
+  examples: |
+    - pasale los datos a Matias
+- intent: ingresar_reunion
+  examples: |
+    - la reunion [1](id_reunion)
+    - la reunion numero [4](id_reunion)
+    - numero de reunion [23](id_reunion)
+- intent: nuevo_sprint
+  examples: |
+    - quiero definir un nuevo sprint
+    - nuevo sprint
+- intent: fecha
+  examples: |
+    - [25/10/2020](fecha_fin)
+    - [01/12/2020](fecha_fin)
+    - [12/11/2020](fecha_fin)
+    - [14/12/2020](fecha_fin)
+    - [31/09/2020](fecha_fin)
+    - [27/11/2020](fecha_fin)
+- intent: sprint_actual
+  examples: |
+    - cuando finaliza el sprint actual?
+    - hay un sprint actual?
+    - sprint actual
+    - sprint activo
+- intent: proximas_reuniones
+  examples: |
+    - cuales son las proximas reuniones?
+    - dime las proximas reuniones?
+    - cuando es la proxima reunion?
+    - cuando es la proxima reunion=
+- intent: conocer_online
+  examples: |
+    - quiero conocer quienes son los miembros online
+    - quienes estan conectados actualmente
+    - quien esta online
+- intent: conocer_tareas_to_do
+  examples: |
+    - que tareas estan en estado to do
+    - que tareas estan sin empezar a realizarce
+    - que tareas no se comenzaron
+    - que tareas estan sin realizar
+- intent: conocer_tareas_in_progress
+  examples: |
+    - que tareas estan en estado in progress
+    - que tareas estan en progreso
+    - que tareas se estan realizando
+- intent: conocer_tareas_done
+  examples: |
+    - que tareas estan en estado done
+    - que tareas estan terminadas
+- intent: conocer_organizacion
+  examples: |
+    - como esta dividido el trabajo actualmente
+    - cuales son los grupos de trabajo
+    - que grupos hay en el proyecto
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: saludo
+  examples: |
+    - hey
+    - hola
+    - hola! que tal?
+    - buenas
+    - buenas tardes
+    - buenos dias
+    - buenas noches
+    - buendia
+    - quien sos?
+    - que haces?
+- intent: despedida
+  examples: |
+    - hasta la proxima
+    - saludos
+    - chau
+    - nos vemos
+    - un gusto
+    - hasta luego
+    - que estes bien
+    - adios
+- intent: afirmacion
+  examples: |
+    - sí
+    - si
+    - sip
+    - se
+    - sa
+    - de una
+    - ok
+    - dale
+    - mandale
+    - me gusta la idea
+    - sí por favor
+    - comenzemos
+    - afirmativo
+- intent: negacion
+  examples: |
+    - no
+    - nop
+    - negativo
+    - no por favor
+    - no gracias
+    - no, chau
+    - no lo creo
+- intent: agradecer
+  examples: |
+    - muchas gracias!
+    - gracias
+    - muy bien
+    - te agradezco

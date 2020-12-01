@@ -1,0 +1,186 @@
+version: "2.0"
+
+stories:
+
+- story: online members path
+  steps:
+  - intent: conocer_online
+  - action: action_online_members
+
+- story: conocer mi dia
+  steps:
+  - intent: mi_tarea
+  - action: action_mi_tarea
+
+- story: pedido de ayuda
+  steps:
+  - intent: ayuda
+  - action: utter_ayuda
+
+- story: consulta python
+  steps:
+  - intent: python
+  - action: utter_python
+
+
+- story: organizar reunion
+  steps:
+  - intent: organizar_reunion
+  - action: utter_ingresar_hora_descripcion
+  - intent: horario_descripcion
+  - slot_was_set:
+    - horario: "14:30"
+  - slot_was_set:
+    - descripcion: "poker planning"
+  - action: action_nueva_reunion
+  - intent: afirmacion
+  - action: utter_ingresar_fecha
+  - intent: fecha
+  - slot_was_set:
+    - fecha_fin: "28/11/2020"
+  - action: action_programar_reuniones
+
+- story: organizar una sola reunion
+  steps:
+  - intent: organizar_reunion
+  - action: utter_ingresar_hora_descripcion
+  - intent: horario_descripcion
+  - slot_was_set:
+    - horario: "14:30"
+  - slot_was_set:
+    - descripcion: "poker planning"
+  - action: action_nueva_reunion
+  - intent: negacion
+  - action: utter_no_elegir_tarea
+
+
+- story: empezar reunion
+  steps:
+  - intent: empezar_reunion
+  - action: utter_ingresar_id_reunion
+  - intent: ingresar_reunion
+  - slot_was_set: 
+    - id_reunion: 1
+  - action: action_empezar_reunion
+
+
+
+
+- story: nuevo sprint
+  steps:
+  - intent: nuevo_sprint
+  - action: utter_ingresar_fecha
+  - intent: fecha
+  - slot_was_set:
+    - fecha_fin: "28/11/2020"
+  - action: action_nuevo_sprint
+  - intent: afirmacion
+  - action: utter_ingresar_hora
+  - intent: horario
+  - slot_was_set:
+    - horario: "14:30"
+  - action: action_programar_dailys
+
+
+- story: sprint actual
+  steps:
+  - intent: sprint_actual
+  - action: action_sprint_actual
+
+- story: consulta comentarios python
+  steps:
+  - intent: comentarios_python
+  - action: utter_comentarios_python
+
+- story: consulta operadores python
+  steps:
+  - intent: operadores_python
+  - action: utter_operadores_python
+
+- story: consulta listas python
+  steps:
+  - intent: listas_python
+  - action: utter_listas_python
+
+- story: consulta artefactos
+  steps:
+  - intent: artefactos
+  - action: utter_artefactos
+
+- story: agradecimiento
+  steps:
+  - intent: agradecer
+  - action: utter_de_nada
+
+
+- story: tareas to do
+  steps:
+  - intent: conocer_tareas_to_do
+  - action: action_tareas_to_do
+  - intent: afirmacion
+  - action: utter_elegir_tarea
+  - intent: asignar_tarea
+  - slot_was_set:
+    - id_tarea: "1"
+  - action: action_asignar_tarea
+
+- story: tareas to do
+  steps:
+  - intent: conocer_tareas_to_do
+  - action: action_tareas_to_do
+  - intent: negacion
+  - action: utter_no_elegir_tarea
+
+- story: conocer reuniones
+  steps: 
+  - intent: proximas_reuniones
+  - action: action_proximas_reuniones
+
+- story: tareas in progress
+  steps:
+  - intent: conocer_tareas_in_progress
+  - action: action_tareas_in_progress
+
+- story: tareas done
+  steps:
+  - intent: conocer_tareas_done
+  - action: action_tareas_done
+
+
+- story: organizacion actual
+  steps: 
+  - intent: conocer_organizacion
+  - action: action_organizacion_actual
+
+- story: pasar datos
+  steps:
+  - intent: pasar_datos
+  - action: action_pasar_datos
+
+
+- story: interactive_story_1
+  steps:
+  - intent: organizar_reunion
+  - action: utter_ingresar_hora_descripcion
+  - intent: horario_descripcion
+    entities:
+    - horario: 13:23
+    - descripcion: poker planning
+  - slot_was_set:
+    - descripcion: poker planning
+  - slot_was_set:
+    - horario: 13:23
+  - action: action_nueva_reunion
+  - intent: negacion
+  - action: utter_no_elegir_tarea
+  - intent: organizar_reunion
+  - action: utter_ingresar_hora_descripcion
+  - intent: horario_descripcion
+    entities:
+    - horario: 15:13
+    - descripcion: restropective
+  - slot_was_set:
+    - descripcion: restropective
+  - slot_was_set:
+    - horario: 15:13
+  - action: action_nueva_reunion

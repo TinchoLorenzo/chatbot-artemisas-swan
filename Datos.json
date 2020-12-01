@@ -1,0 +1,28 @@
+{
+    "nombre":"TiempoLecturaUserStory",
+    "Items":[
+        {"user_id": "Juan","value": "16"},
+        {"user_id": "Ismael","value": "35"}
+        ]
+},
+{
+    "nombre":"Recurso",
+    "Items":[
+        {"user_id": "Juan","value": "Audio"},
+        {"user_id": "Ismael","value": "Texto"}
+        ]
+},
+{
+    "nombre":"TiempoTrabajoUserStory",
+    "Items":[
+        {"user_id": "Juan","value": "20"},
+        {"user_id": "Ismael","value": "35"}
+    ]
+},
+{
+    "nombre":"ParticipacionesMeetings",
+    "Items":[
+        {"user_id": "Juan","value": "44"},
+        {"user_id": "Ismael","value": "33"}
+    ]
+}
