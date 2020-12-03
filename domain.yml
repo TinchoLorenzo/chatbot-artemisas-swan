@@ -2,6 +2,9 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- out_of_scope
+- conocer_tareas_to_do
+- conocer_tareas_in_progress
 - horario_descripcion
 - organizar_reunion
 - negacion
@@ -10,7 +13,6 @@ intents:
 - afirmacion
 - fecha
 - stop
-- conocer_tareas_to_do
 - greet
 - bot_challenge
 - saludo
@@ -18,7 +20,6 @@ intents:
 - agradecer
 - respuesta
 - conocer_online
-- conocer_tareas_in_progress
 - conocer_tareas_done
 - conocer_organizacion
 - ayuda
@@ -96,6 +97,12 @@ responses:
   - text: Perfecto, ingresa la hora en formato HH:MM seguido de la descripcion de la reunion
   utter_ingresar_id_reunion:
   - text: Ingresa el numero de la reunion que quieres comenzar
+  utter_out_of_scope:
+  - text: No te entendi, puedes repetirmelo o decirmelo de otra forma?
+  utter_saludo:
+  - text: Hola, en que puedo ayudarte?
+  utter_despedida:
+  - text: Chau
 actions:
 - action_asignar_tarea
 - action_empezar_reunion
@@ -115,5 +122,5 @@ actions:
 - action_tareas_to_do
 - utter_ingresar_hora_descripcion
 - utter_no_elegir_tarea
-- action_pasar_datos
+- utter_out_of_scope
 version: '2.0'

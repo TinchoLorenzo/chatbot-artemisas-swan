@@ -129,11 +129,13 @@ nlu:
     - que tareas estan sin empezar a realizarce
     - que tareas no se comenzaron
     - que tareas estan sin realizar
+    - cuales son las tareas en estado to do
 - intent: conocer_tareas_in_progress
   examples: |
     - que tareas estan en estado in progress
     - que tareas estan en progreso
     - que tareas se estan realizando
+    - cuales son las tareas en progreso?
 - intent: conocer_tareas_done
   examples: |
     - que tareas estan en estado done
@@ -201,3 +203,10 @@ nlu:
     - gracias
     - muy bien
     - te agradezco
+- intent: out_of_scope
+  examples: |
+    - cuanto es 2 + 2?
+    - quien es el presidente de Argentina?
+    - cuando murio el diegote?
+    - quiero comida
+    - sadasda
